@@ -32,9 +32,10 @@ public class RestConfiguration implements RepositoryRestConfigurer {
         validatingListener.addValidator("beforeSave", validator);
     }
 
+
     // Standardizes how application determines host name for responses (Uses Url from gateway)
     @Bean
-    ForwardedHeaderFilter forwardedHeaderFilter()   {
+    ForwardedHeaderFilter forwardedHeaderFilter() {
         return new ForwardedHeaderFilter();
     }
 
